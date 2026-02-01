@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishal Sharma – DevOps Engineer [DEV]</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Courier New', monospace;
+      background: #0a0a0a;
+      color: #00ff00;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    
+    .terminal {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #1a1a1a;
+      border: 2px solid #333;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    }
+    
+    .terminal-header {
+      background: #2a2a2a;
+      padding: 10px 15px;
+      border-bottom: 1px solid #333;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    
+    .dot.red { background: #ff5f56; }
+    .dot.yellow { background: #ffbd2e; }
+    .dot.green { background: #27c93f; }
+    
+    .terminal-title {
+      margin-left: 10px;
+      color: #888;
+      font-size: 14px;
+    }
+    
+    .env-badge {
+      background: #ff5f56;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-size: 12px;
+      margin-left: auto;
+    }
+    
+    .terminal-body {
+      padding: 30px;
+    }
+    
+    .prompt {
+      color: #00ff00;
+      margin-bottom: 10px;
+    }
+    
+    .prompt::before {
+      content: "vishal@devops:~$ ";
+      color: #0099ff;
+    }
+    
+    h1 {
+      color: #00ff00;
+      font-size: 2em;
+      margin-bottom: 5px;
+      text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+    
+    h2 {
+      color: #0099ff;
+      font-size: 1.3em;
+      margin: 20px 0 10px 0;
+      border-bottom: 1px solid #333;
+      padding-bottom: 5px;
+    }
+    
+    .subtitle {
+      color: #888;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+    
+    .info-line {
+      color: #ccc;
+      margin: 5px 0;
+    }
+    
+    .info-line span {
+      color: #00ff00;
+    }
+    
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    li {
+      margin: 8px 0;
+      color: #ccc;
+    }
+    
+    li::before {
+      content: "▸ ";
+      color: #00ff00;
+      font-weight: bold;
+    }
+    
+    a {
+      color: #0099ff;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    a:hover {
+      color: #00ff00;
+      text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+    
+    .section {
+      margin: 25px 0;
+    }
+    
+    .comment {
+      color: #666;
+      font-style: italic;
+    }
+    
+    .blink {
+      animation: blink 1s infinite;
+    }
+    
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal">
+    <div class="terminal-header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="terminal-title">vishal@devops-portfolio</span>
+      <span class="env-badge">DEV</span>
+    </div>
+    
+    <div class="terminal-body">
+      <div class="prompt">cat vishal_sharma.txt</div>
+      
+      <h1>VISHAL SHARMA</h1>
+      <div class="subtitle">DevOps Engineer | System Administrator</div>
+      
+      <div class="info-line">📧 Email: <span>vvishalsharma0609@gmail.com</span></div>
+      <div class="info-line">📱 Phone: <span>+91 8602224489</span></div>
+      <div class="info-line">🔗 LinkedIn: <a href="https://linkedin.com/in/vvishalsharma" target="_blank">linkedin.com/in/vvishalsharma</a></div>
+      <div class="info-line">💻 GitHub: <a href="https://github.com/tf-vishal" target="_blank">github.com/tf-vishal</a></div>
+      
+      <div class="section">
+        <h2>// EDUCATION</h2>
+        <div class="info-line">🎓 <span>Bachelor of Computer Applications (BCA)</span></div>
+        <div class="info-line" style="margin-left: 20px;">Makhanlal Chaturvedi National University | Graduated July 2024</div>
+        <div class="info-line" style="margin-left: 20px;">CGPA: 7.5 | Graffix College, Guna</div>
+      </div>
+      
+      <div class="section">
+        <h2>// TECHNICAL SKILLS</h2>
+        <ul>
+          <li>Containerization: Docker, Kubernetes, Helm</li>
+          <li>CI/CD: Jenkins, GitLab CI/CD, GitHub Actions</li>
+          <li>Cloud: AWS, Microsoft Azure</li>
+          <li>Monitoring: Prometheus</li>
+          <li>Version Control: Git, GitHub, GitLab, Jira</li>
+          <li>OS & Scripting: Linux (Ubuntu, Arch), Shell, Python, Go</li>
+        </ul>
+      </div>
+      
+      <div class="section">
+        <h2>// EXPERIENCE</h2>
+        <div class="info-line"><span>System Admin Intern</span> @ Sharma & Company, Burhanpur</div>
+        <div class="info-line" style="margin-left: 20px;">Jan 2025 - June 2025</div>
+        <ul style="margin-left: 20px; margin-top: 10px;">
+          <li>Reduced system downtime by 50% through optimized workflows</li>
+          <li>Managed LAN infrastructure and network devices</li>
+          <li>Handled critical network, system, and software issues</li>
+        </ul>
+      </div>
+      
+      <div class="section">
+        <h2>// FEATURED PROJECTS</h2>
+        
+        <div style="margin-bottom: 15px;">
+          <div class="info-line"><span>Containerized Online Shop</span> (Docker + AWS EC2)</div>
+          <ul style="margin-left: 20px;">
+            <li>Improved deployment speed by 50%</li>
+            <li>Reduced Docker image size by 1GB using multi-stage builds</li>
+            <li>Implemented Docker Scout for security analysis</li>
+          </ul>
+        </div>
+        
+        <div>
+          <div class="info-line"><span>Azure Web Application</span> (CI/CD + Kubernetes)</div>
+          <ul style="margin-left: 20px;">
+            <li>Built zero-touch Jenkins CI/CD pipeline</li>
+            <li>Reduced manual release steps from 6 to 1</li>
+            <li>Automated rollback for deployment failures</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="section">
+        <h2>// CERTIFICATIONS</h2>
+        <ul>
+          <li>Cisco Certified Network Associate (CCNA) | Valid: Mar 2024 - Mar 2027</li>
+          <li>TCS NPT IT – Network Engineer | Valid: Nov 2024 - Nov 2026</li>
+        </ul>
+      </div>
+      
+      <div class="prompt" style="margin-top: 30px;">echo "Ready to collaborate!"<span class="blink">_</span></div>
+    </div>
+  </div>
+</body>
+</html>

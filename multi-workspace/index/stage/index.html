@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishal Sharma – DevOps Engineer [STAGING]</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Courier New', monospace;
+      background: #0d1117;
+      color: #58a6ff;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    
+    .terminal {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #161b22;
+      border: 2px solid #30363d;
+      border-radius: 8px;
+      box-shadow: 0 0 30px rgba(88, 166, 255, 0.2);
+    }
+    
+    .terminal-header {
+      background: #21262d;
+      padding: 10px 15px;
+      border-bottom: 1px solid #30363d;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    
+    .dot.red { background: #ff5f56; }
+    .dot.yellow { background: #ffbd2e; }
+    .dot.green { background: #27c93f; }
+    
+    .terminal-title {
+      margin-left: 10px;
+      color: #8b949e;
+      font-size: 14px;
+    }
+    
+    .env-badge {
+      background: #ffbd2e;
+      color: #000;
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-size: 12px;
+      margin-left: auto;
+      font-weight: bold;
+    }
+    
+    .terminal-body {
+      padding: 30px;
+    }
+    
+    .prompt {
+      color: #79c0ff;
+      margin-bottom: 10px;
+    }
+    
+    .prompt::before {
+      content: "vishal@devops:~$ ";
+      color: #58a6ff;
+    }
+    
+    h1 {
+      color: #79c0ff;
+      font-size: 2.2em;
+      margin-bottom: 5px;
+      text-shadow: 0 0 10px rgba(121, 192, 255, 0.5);
+      letter-spacing: 1px;
+    }
+    
+    h2 {
+      color: #ffa657;
+      font-size: 1.4em;
+      margin: 25px 0 12px 0;
+      border-bottom: 2px solid #30363d;
+      padding-bottom: 8px;
+    }
+    
+    .subtitle {
+      color: #8b949e;
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    
+    .info-line {
+      color: #c9d1d9;
+      margin: 5px 0;
+    }
+    
+    .info-line span {
+      color: #79c0ff;
+    }
+    
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
+      margin: 15px 0;
+    }
+    
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    li {
+      margin: 8px 0;
+      color: #c9d1d9;
+      padding-left: 20px;
+      position: relative;
+    }
+    
+    li::before {
+      content: "▸ ";
+      color: #58a6ff;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+      transition: all 0.3s;
+      border-bottom: 1px solid transparent;
+    }
+    
+    a:hover {
+      color: #79c0ff;
+      border-bottom-color: #79c0ff;
+      text-shadow: 0 0 5px rgba(121, 192, 255, 0.5);
+    }
+    
+    .section {
+      margin: 30px 0;
+    }
+    
+    .project-card {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 15px;
+      margin: 15px 0;
+      transition: all 0.3s;
+    }
+    
+    .project-card:hover {
+      border-color: #58a6ff;
+      box-shadow: 0 0 15px rgba(88, 166, 255, 0.2);
+    }
+    
+    .project-title {
+      color: #79c0ff;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+    
+    .tag {
+      display: inline-block;
+      background: #1f6feb;
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-size: 0.85em;
+      margin: 5px 5px 5px 0;
+    }
+    
+    .cert-item {
+      background: #0d1117;
+      border-left: 3px solid #58a6ff;
+      padding: 10px 15px;
+      margin: 10px 0;
+    }
+    
+    .blink {
+      animation: blink 1s infinite;
+    }
+    
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+    
+    .stats {
+      display: flex;
+      gap: 20px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    
+    .stat-box {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 15px 20px;
+      text-align: center;
+      flex: 1;
+      min-width: 150px;
+    }
+    
+    .stat-number {
+      color: #79c0ff;
+      font-size: 2em;
+      font-weight: bold;
+    }
+    
+    .stat-label {
+      color: #8b949e;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal">
+    <div class="terminal-header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="terminal-title">vishal@devops-portfolio</span>
+      <span class="env-badge">STAGING</span>
+    </div>
+    
+    <div class="terminal-body">
+      <div class="prompt">cat vishal_sharma.json | jq '.'</div>
+      
+      <h1>VISHAL SHARMA</h1>
+      <div class="subtitle">DevOps Engineer | Cloud Enthusiast | System Administrator</div>
+      
+      <div class="info-grid">
+        <div class="info-line">📧 <span>vvishalsharma0609@gmail.com</span></div>
+        <div class="info-line">📱 <span>+91 8602224489</span></div>
+      </div>
+      
+      <div class="info-grid">
+        <div class="info-line">🔗 <a href="https://linkedin.com/in/vvishalsharma" target="_blank">LinkedIn Profile</a></div>
+        <div class="info-line">💻 <a href="https://github.com/tf-vishal" target="_blank">GitHub Profile</a></div>
+      </div>
+      
+      <div class="section">
+        <div class="stats">
+          <div class="stat-box">
+            <div class="stat-number">50%</div>
+            <div class="stat-label">Faster Deployments</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">1GB</div>
+            <div class="stat-label">Image Size Reduced</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">7.5</div>
+            <div class="stat-label">CGPA</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section">
+        <h2>// EDUCATION</h2>
+        <div class="info-line">🎓 <span>Bachelor of Computer Applications (BCA)</span></div>
+        <div class="info-line" style="margin-left: 20px;">Makhanlal Chaturvedi National University of Journalism and Communication</div>
+        <div class="info-line" style="margin-left: 20px;">Graffix College, Guna | Graduated July 2024 | CGPA: 7.5</div>
+        <div class="info-line" style="margin-left: 20px; margin-top: 8px;">
+          <span class="tag">Operating Systems</span>
+          <span class="tag">Computer Networks</span>
+          <span class="tag">Cloud Fundamentals</span>
+        </div>
+      </div>
+      
+      <div class="section">
+        <h2>// TECHNICAL EXPERTISE</h2>
+        
+        <div style="margin-bottom: 15px;">
+          <div class="info-line"><span>Containerization & Orchestration</span></div>
+          <div style="margin-left: 20px; margin-top: 5px;">
+            <span class="tag">Docker</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Helm</span>
+          </div>
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+          <div class="info-line"><span>CI/CD & Automation</span></div>
+          <div style="margin-left: 20px; margin-top: 5px;">
+            <span class="tag">Jenkins</span>
+            <span class="tag">GitLab CI/CD</span>
+            <span class="tag">GitHub Actions</span>
+          </div>
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+          <div class="info-line"><span>Cloud Platforms</span></div>
+          <div style="margin-left: 20px; margin-top: 5px;">
+            <span class="tag">AWS</span>
+            <span class="tag">Microsoft Azure</span>
+          </div>
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+          <div class="info-line"><span>Development & Scripting</span></div>
+          <div style="margin-left: 20px; margin-top: 5px;">
+            <span class="tag">Linux</span>
+            <span class="tag">Shell Scripting</span>
+            <span class="tag">Python</span>
+            <span class="tag">Go</span>
+            <span class="tag">Git</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section">
+        <h2>// PROFESSIONAL EXPERIENCE</h2>
+        <div class="info-line"><span>System Admin Intern</span> @ Sharma & Company, Burhanpur, MP</div>
+        <div class="info-line" style="margin-left: 20px; color: #8b949e;">Jan 2025 - June 2025</div>
+        <ul style="margin-left: 20px; margin-top: 10px;">
+          <li>Reduced system downtime by 50% through streamlined troubleshooting workflows</li>
+          <li>Managed LAN infrastructure and network devices (printers, switches)</li>
+          <li>Resolved critical network, system, and software issues</li>
+          <li>Implemented faster issue resolution processes</li>
+        </ul>
+      </div>
+      
+      <div class="section">
+        <h2>// TECHNICAL PROJECTS</h2>
+        
+        <div class="project-card">
+          <div class="project-title">🚀 Containerized Online Shop Deployment</div>
+          <div style="margin: 10px 0;">
+            <span class="tag">Docker</span>
+            <span class="tag">AWS EC2</span>
+            <span class="tag">Docker Scout</span>
+            <span class="tag">Docker Compose</span>
+          </div>
+          <ul>
+            <li>Improved deployment speed by 50% using optimized workflows</li>
+            <li>Reduced Docker image size by 1GB through multi-stage builds</li>
+            <li>Implemented Docker Scout for vulnerability analysis and security</li>
+            <li>Automated setup with Docker Compose for seamless deployment</li>
+            <li>Deployed scalable application on Amazon EC2</li>
+          </ul>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-title">☁️ Azure Web Application CI/CD Pipeline</div>
+          <div style="margin: 10px 0;">
+            <span class="tag">Azure</span>
+            <span class="tag">Jenkins</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Three-Tier Architecture</span>
+          </div>
+          <ul>
+            <li>Orchestrated end-to-end deployment of containerized three-tier app</li>
+            <li>Built zero-touch Jenkins CI/CD pipeline for automated deployments</li>
+            <li>Reduced manual release steps from 6 to 1</li>
+            <li>Implemented automated rollback on deployment failures</li>
+            <li>Stack: Java backend, JavaScript frontend, MySQL database</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="section">
+        <h2>// CERTIFICATIONS</h2>
+        
+        <div class="cert-item">
+          <div class="info-line"><span>Cisco Certified Network Associate (CCNA)</span></div>
+          <div class="info-line" style="margin-left: 20px; color: #8b949e;">Cisco Systems | Valid: March 2024 - March 2027</div>
+        </div>
+        
+        <div class="cert-item">
+          <div class="info-line"><span>TCS NPT IT – Network Engineer</span></div>
+          <div class="info-line" style="margin-left: 20px; color: #8b949e;">Tata Consultancy Services | Valid: November 2024 - November 2026</div>
+        </div>
+      </div>
+      
+      <div class="prompt" style="margin-top: 30px;">echo "Let's build something amazing together!"<span class="blink">_</span></div>
+    </div>
+  </div>
+</body>
+</html>
